@@ -1,25 +1,5 @@
-# ReduxSimpleStarter
+# React Redux Playground
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+This project is an excersice and a refresher in `React`, `Redux` and everything in between. 
 
-### Getting Started
-
-There are two methods for getting started with this repo.
-
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
+It will be deployed to `Heroku` and will allow users to search and watch videos from Youtube through Google's `YouTube Data API v3`.
