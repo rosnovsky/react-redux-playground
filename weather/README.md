@@ -1,25 +1,9 @@
-# ReduxSimpleStarter
+# React Redux Playground
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+This project is an exercise and a refresher in `React`, `Redux` and everything in between. 
 
-### Getting Started
+`Youtube Search` will be deployed to `Heroku` and will allow users to search and watch videos from Youtube through Google's `YouTube Data API v3`.
 
-There are two methods for getting started with this repo.
+`Books` is just a basic primer on storing and retrieving data from Redux from withing the React application.
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
+`Weather` is a fully functional app (will be deployed to `Heroku`) for searching and viewing weather forecast for any number of US cities. It uses all the goodness from Redux to React to React router to 3rd party APIs.
