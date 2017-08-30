@@ -12,6 +12,7 @@ export class SearchBar extends Component {
   }
   
   onInputChange (event) {
+    // autocomplete dropdown goes here
     this.setState({ term: event.target.value });
   }
 
