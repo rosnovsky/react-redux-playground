@@ -43,8 +43,8 @@ class WeatherList extends Component {
           <tr>
             <th>City</th>
             <th>Temperature</th>
-            <th>Pressure</th>
             <th>Humidity</th>
+            <th>Pressure</th>
           </tr>
         </thead>
         <tbody>
