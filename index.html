@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="us">
+  <head>
+    <title>
+      Three React/Redux projects
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/48938155eb24b4ccdde09426066869504c6dab3c/dist/css/bootstrap.min.css">
+    <style>
+      li {
+        list-style: none;
+        padding: 20px;
+      }  
+      .container {
+        display: flex;
+        min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+        min-height: 100vh; /* These two lines are counted as one :-)       */
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="centered">
+        <h2 style="text-align: center">
+          Choose a project
+        </h2>
+        <ul>
+          <li>
+            <h4><a href="./youtube-search/index.html">Youtube Search Demo</a></h4>
+            <p><small>React</small></p> 
+            <p>
+                <code>Youtube Search</code> allow users to search and watch videos from Youtube through Google's <code>YouTube Data API v3</code>. 
+            </p>
+
+          </li>
+          
+          <li>
+            <h4><a href="./books/index.html">Book Selector</a></h4> <p><small>Redux</small></p>
+            <p>
+                <code>Books</code> is just a basic primer on storing and retrieving data from Redux within a React application.
+            </p>
+          </li>
+        
+          <li><h4><a href="./weather/index.html">Weather Forecast App Demo</a></h4> <p><small>React &amp; Redux</small></p>
+            <p>This project is an exercise and a refresher in React, Redux and everything in between.</p>
+            
+            <p><code>Weather</code> is a fully functional app (will be deployed to Heroku eventually) for searching and viewing 5-day weather forecast for any number of cities. It uses all the goodness from Redux to React to 3rd party APIs.</p>
+
+          </li>
+        </div>
+      </div>
+  </body>
+</html>
