@@ -1,0 +1,8 @@
+a {
+    color
+}
+
+body ::selection {
+    color: white;
+    background-color: #e73b2b;
+}

@@ -11,7 +11,7 @@ const VideoList = (props) => {
                 key={video.etag}
                 video={video} />
          )
-        })
+        });
 
     
     return (
@@ -19,6 +19,6 @@ const VideoList = (props) => {
             {videoItems}
         </ul>
     )
-}
+};
 
 export default VideoList;
