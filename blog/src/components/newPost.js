@@ -11,6 +11,7 @@ class NewPost extends Component {
                type="text"
                {...field.input}
         />
+        <p>{field.meta.error}</p>
       </div>
     )
   }
@@ -22,12 +23,18 @@ class NewPost extends Component {
       <textarea className="form-control"
              {...field.input}
       />
+        <p>{field.meta.error}</p>
     </div>
     )
   }
 
+  onSubmit(values) {
+    console.log(values);
+  }
 
   render() {
+    const { handleSubmit } = this.props;
+
     return (
       <div>
         <div className="text-xs-right">
@@ -36,7 +43,7 @@ class NewPost extends Component {
           </Link>
         </div>
         <h3>Create New Post</h3>
-        <form>
+        <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
           <Field
             label="Post Title"
             name="title"
@@ -51,6 +58,7 @@ class NewPost extends Component {
             label="Text"
             name="text"
             component={this.renderTextField} />
+          <button className="btn btn-primary" type="submit">Submit</button>
         </form>
       </div>
     )
