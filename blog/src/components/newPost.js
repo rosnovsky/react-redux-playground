@@ -1,50 +1,56 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import { createPost } from '../actions';
 
 class NewPost extends Component {
   renderField (field) {
+    
+    const { meta: { touched, error } } = field;
+    const formClassName = `form-group ${ touched && error ? "has-danger" : ""}`;
+    const inputClassName = `form-control ${ touched && error ? "form-control-danger" : ""}`;
+
     return (
-      <div className="form-group">
-        <label>{field.label}</label>
-        <input className="form-control"
+      <div className={formClassName}>
+        <label className="form-control-label">{field.label}</label>
+        <input className={inputClassName}
                type="text"
                {...field.input}
         />
-        <p>{field.meta.error}</p>
+        <p className="form-control-feedback">{ touched ? error : "" }</p>
       </div>
     )
   }
 
   renderTextField(field) {
+    const { meta: { touched, error } } = field;
+    const className = `form-group ${ touched && error ? "has-danger" : "" }`;
+    const inputClassName = `form-control ${ touched && error ? "form-control-danger" : ""}`;
+
     return (
-      <div className="form-group">
-      <label>{field.label}</label>
-      <textarea className="form-control"
+      <div className={className}>
+      <label className="form-control-label">{field.label}</label>
+      <textarea className={inputClassName}
              {...field.input}
       />
-        <p>{field.meta.error}</p>
+      <p className="form-control-feedback">{ touched ? error : "" }</p>
     </div>
     )
   }
 
   onSubmit(values) {
-    console.log(values);
+    this.props.createPost(values);
   }
 
   render() {
     const { handleSubmit } = this.props;
 
     return (
-      <div>
-        <div className="text-xs-right">
-          <Link className="btn btn-primary" to="/posts/new">
-            Create New Post
-          </Link>
-        </div>
-        <h3>Create New Post</h3>
+      <div className="container-fluid">
+        <h3 className="display-2">Create New Post</h3>
         <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-          <Field
+          <Field 
             label="Post Title"
             name="title"
             component={this.renderField}/>
@@ -59,6 +65,7 @@ class NewPost extends Component {
             name="text"
             component={this.renderTextField} />
           <button className="btn btn-primary" type="submit">Submit</button>
+          <Link to="/" className="btn btn-danger">Cancel</Link>
         </form>
       </div>
     )
@@ -68,16 +75,16 @@ class NewPost extends Component {
 function validate (values) {
   const errors ={};
 
-  if(!values.title){
-    errors.title = "Enter a title";
+  if(!values.title || values.title.length < 3 || values.title.length > 100){
+    errors.title = "Please enter a title of 3 to 100 characters";
   }
 
-  if(!values.categories){
-    errors.categories = "Enter at least one category";
+  if(!values.categories || values.categories.length < 3 || values.categories.length > 100 ){
+    errors.categories = "Please enter at least one category of at least 3 to 100 characters";
   }
 
-  if(!values.text){
-    errors.text = "Enter some text, it's a blog after all";
+  if(!values.text || values.text.length < 140 ){
+    errors.text = "Enter at least 140 characters, it's a blog after all";
   }
 
   return errors;
@@ -86,4 +93,4 @@ function validate (values) {
 export default reduxForm({
   validate,
   form: "PostsNewForm"
-})(NewPost);
+})(connect(null, {createPost})(NewPost))

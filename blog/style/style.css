@@ -1,8 +1,17 @@
-a {
-    color
+.container-fluid {
+    margin-top: 2em;
+}
+
+form a {
+    margin-left: 5px;    
 }
 
 body ::selection {
     color: white;
     background-color: #e73b2b;
+}
+
+h3 {
+    margin-top: 2em;
+    margin-bottom: 2em;
 }

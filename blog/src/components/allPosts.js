@@ -24,18 +24,25 @@ class Index extends Component {
 
     render() {
         return (
-            <div>
-                <div className="text-xs-right">
-                    <Link className="btn btn-primary" to="/posts/new">
-                        Create New Post
-                    </Link>
-                </div>
-                <h3>Posts</h3>
-                <ul className="list-group">
-                    {this.renderPosts()}
-                </ul>
-            </div>
+            <div className="container-fluid">
 
+                <div className="row">
+                    <div className="col">
+                        <div className="text-xs-right">
+                            <Link className="btn btn-primary" to="/posts/new">
+                                Create New Post
+                            </Link>
+                        </div>
+                    </div>
+                    
+                    <div className="col-md-left">
+                        <h3 className = "display-2">Posts</h3>
+                        <ul className="list-group">
+                            {this.renderPosts()}
+                        </ul>
+                    </div>
+                </div>   
+            </div>
         )
     }
 }
