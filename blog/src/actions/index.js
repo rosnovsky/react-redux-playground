@@ -5,7 +5,7 @@ export const FETCH_POST = "fetchPost";
 export const CREATE_POST = "createPosts";
 export const DELETE_POST = "deletePost";
 
-const ROOT_URL = "http://reduxblog.herokuapp.com/api/";
+const ROOT_URL = "https://reduxblog.herokuapp.com/api/";
 const API_KEY = "?key=rosnovsky";
 
 export function fetchPosts(){
