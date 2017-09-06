@@ -11,8 +11,9 @@ class Index extends Component {
     renderPosts(){
         return (
             _.map(this.props.posts, post => {
+                const postURL = `/posts/${post.id}`;
                 return(
-                    <li className="list-group-item" key={post.id}><Link to="/posts/" >{post.title}</Link></li>
+                    <li className="list-group-item" key={post.id}><Link to={postURL} >{post.title}</Link></li>
                 )
             })
         )
@@ -25,7 +26,6 @@ class Index extends Component {
     render() {
         return (
             <div className="container-fluid">
-
                 <div className="row">
                     <div className="col">
                         <div className="text-xs-right">

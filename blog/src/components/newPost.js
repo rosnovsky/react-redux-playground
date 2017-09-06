@@ -40,7 +40,9 @@ class NewPost extends Component {
   }
 
   onSubmit(values) {
-    this.props.createPost(values);
+    this.props.createPost(values, () => {
+      this.props.history.push('/');
+    });
   }
 
   render() {
@@ -61,8 +63,8 @@ class NewPost extends Component {
             component={this.renderField} />
 
           <Field
-            label="Text"
-            name="text"
+            label="Content"
+            name="content"
             component={this.renderTextField} />
           <button className="btn btn-primary" type="submit">Submit</button>
           <Link to="/" className="btn btn-danger">Cancel</Link>
@@ -83,8 +85,8 @@ function validate (values) {
     errors.categories = "Please enter at least one category of at least 3 to 100 characters";
   }
 
-  if(!values.text || values.text.length < 140 ){
-    errors.text = "Enter at least 140 characters, it's a blog after all";
+  if(!values.content || values.content.length < 40 ){
+    errors.content = `Enter at least 40 characters, it's a blog after all`;
   }
 
   return errors;
