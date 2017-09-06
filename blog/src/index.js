@@ -25,7 +25,6 @@ ReactDOM.render(
                 <Route path="/posts/new" component={NewPost} />
                 <Route path="/posts/:id" component={ShowPost} />
                 <Route path="/" component={AllPosts} />
-
             </Switch>
         </div>
     </BrowserRouter>
