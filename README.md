@@ -1,5 +1,7 @@
 # React Redux Playground
 
+[Demo](https://rosnovsky.github.io/react-redux-projects/)
+
 This project is an exercise and a refresher in `React`, `Redux` and everything in between. 
 
 `Youtube Search` will be deployed to `Heroku` and will allow users to search and watch videos from Youtube through Google's `YouTube Data API v3`.
