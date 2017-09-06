@@ -1,9 +1,8 @@
 {
-  "name": "redux-simple-starter",
+  "name": "react-redux-weather",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "Simple app for looking up weather",
   "main": "server.js",
-  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "engines": {
     "node": "8.1.1",
     "npm": "5.0.3"
@@ -15,7 +14,7 @@
     "postinstall": "webpack -p",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Artem Rosnovskiy",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.2.1",
