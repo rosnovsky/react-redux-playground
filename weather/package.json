@@ -2,7 +2,7 @@
   "name": "redux-simple-starter",
   "version": "1.0.0",
   "description": "Simple starter package for Redux with React and Babel support",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "engines": {
     "node": "8.1.1",
