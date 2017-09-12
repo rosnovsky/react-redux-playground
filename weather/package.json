@@ -8,11 +8,12 @@
     "npm": "5.0.3"
   },
   "scripts": {
+    "start": "node server.js",
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "server": "nodemon index.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
-    "postinstall": "webpack -p",
-    "start": "node server.js"
+    "postinstall": "webpack -p"
   },
   "author": "Artem Rosnovskiy",
   "license": "ISC",
